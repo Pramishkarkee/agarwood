@@ -1,0 +1,66 @@
+
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}" />
+  
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- font awesome style -->
+  {% comment %} <link href="css/font-awesome.min.css" rel="stylesheet" /> {% endcomment %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"  />
+  <!-- responsive style -->
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}"  />
+   <header class="header_section">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="/">
+              <span>BirtAgro</span>
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                {% comment %} <li class="nav-item">
+                  <a class="nav-link" href="about"> About yy</a>
+                </li> {% endcomment %}
+                {% comment %} <li class="nav-item">
+                  <a class="nav-link" href="fruit.html">Fruits</a>
+                </li> {% endcomment %}
+                <li class="nav-item">
+                  <a class="nav-link" href="about-us">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="blog">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="goal">Goals</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service">Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="product">Products</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="project">Project</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="opportunity">Opportunities</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>

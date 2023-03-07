@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <title>Birtagro</title>
+
+
+  
+
+</head>
+
+<body>
+  {% include "header.html" %}
+  <!-- header section strats -->
+  
+  <!-- end header section -->
+
+  <!-- blog section -->
+
+
+  <section class="blog_section layout_padding2-top layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Latest From Blog
+        </h2>
+      </div>
+      
+      <div class="row">
+        {% for i in data %}
+        <div class="col-md-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="media/{{i.image}}" alt="">
+              <h4 class="blog_date">
+                
+                {% comment %} 29 <br>
+                June {% endcomment %}
+                {{i.created_at}}
+              </h4>
+            </div>
+            <div class="detail-box">
+              <h5>
+
+                {{i.title}}
+              </h5>
+              <div class="content">
+              <p>
+                {{i.content}}
+              </p>
+              <a href="{% url 'blogdetail' i.id %}" >
+                Read More
+              </a>
+            </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      
+      
+    </div>
+  </section>
+
+  <!-- end blog section -->
+
+  <!-- info section -->
+<script>
+  jQuery(document).ready(function ($) {
+    // text limiter
+    
+    function textLimit(elements,maxTextLength) {
+        for (var i = 0; i < elements.length; i++){
+            if (elements[i].innerHTML.length > maxTextLength)
+            elements[i].innerHTML = elements[i].innerHTML.slice(0,maxTextLength) + '...';
+        }
+    }
+    
+    textLimit($('.content').find('p'),200);
+    
+});
+</script>
+  {% include "footer.html" %}
+
+</body>
+
+</html>

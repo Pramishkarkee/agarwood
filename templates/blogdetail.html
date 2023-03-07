@@ -1,0 +1,58 @@
+{% include 'header.html'%} {% load static %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/blogdetail.css' %}"
+/>
+<div class="container">
+  <div class="cs-blog-detail">
+    <div class="cs-main-post">
+      <figure>
+        <img
+          onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+          data-pagespeed-url-hash="2714250504"
+          alt="jobline-blog (8)"
+          src="/media/{{blog.image}}"
+        />
+      </figure>
+    </div>
+    <div class="cs-post-title">
+      <div class="cs-author">
+        <figure>
+          <a href=""
+            >
+            <img
+              width="32"
+              height="32"
+              onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+              data-pagespeed-url-hash="1229941675"
+              class="avatar avatar-32 photo"
+              src="/media/{{blog.writer.profile}}"
+              alt=""
+          /></a>
+        </figure>
+        <div class="cs-text">
+          <a href="">{{blog.writer.name}}</a>
+        </div>
+      </div>
+      <div class="post-option">
+        <span class="post-date"
+          ><a href="http://jobcareer.chimpgroup.com/jobdoor/2015/11/"
+            ><i class="cs-color icon-calendar6"></i>{{blog.created_at}}</a
+          ></span
+        >
+      </div>
+    </div>
+    <div class="cs-post-option-panel" id="string-to-html">{{blog.content}}</div>
+  </div>
+</div>
+<div>{% include 'footer.html'%}</div>
+<script>
+    myDivObj = document.getElementById("string-to-html");
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(myDivObj.innerHTML, "text/html");
+    {% comment %} alert(doc.body) {% endcomment %}
+    {% comment %} document.getElementById("string-to-html").innerHTML = doc.body  {% endcomment %}
+  {% comment %} }; {% endcomment %}
+</script>
+{% comment %} {% include 'footer.html'%} {% endcomment %}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Birtagro</title>
+
+
+  <!-- bootstrap core css -->
+ 
+
+</head>
+
+<body>
+  {% include 'header.html' %}
+  
+
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding2-top layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>Get In <span>Touch</span></h2>
+      </div>
+      <div class="row">
+    
+        <div class="col-md-6 px-0">
+          <div class="form_container">
+            <form action="contact" method="POST">
+              {% csrf_token %}
+              <div class="form-row">
+                <div class="form-group col">
+                  <input type="text" class="form-control" name="name" placeholder="Your Name" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  <input type="text" class="form-control" name="contact" placeholder="Phone Number" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  <input type="email" class="form-control" name="email" placeholder="Email" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  <input type="text" class="message-box form-control" name="messages" placeholder="Message" />
+                </div>
+              </div>
+              <div class="btn_box">
+                <button>
+                  SEND
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+
+  <!-- info section -->
+
+  {% include 'footer.html' %}
+  <!-- End Google Map -->
+
+</body>
+
+</html>

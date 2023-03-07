@@ -1,0 +1,53 @@
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <title>Birta Agro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    
+    <link rel="stylesheet" href="{% static 'css/page.css' %}"  />
+    <body>
+    
+        {% include 'header.html' %}
+        <div class="container">
+    <section>
+      <sidebar>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+        </ul>
+      </sidebar>
+      
+      <article>
+        <h6 id="introduction">Birta Agro Concerns is offering a wide range of investment and collaboration opportunities to
+            the public, organizations and sales agents.</h6>
+        <h4>Investment opportunities for individuals and organizations:</h4>
+        <ul>
+            <li><h5>Investment in cooperative plantation group:</h5> Birta Agro Concerns invites individuals
+                and organizations to invest in our cooperative group plantation plans and reap up to 21-
+                30% yearly profit, which keeps increasing with every passing year till the plantation is
+                harvested.</li>
+            <li><h5>Investment in Agarwood inoculation:</h5>Birta Agro Concerns invites individuals and
+                organizations to invest in our agarwood inoculation plans and earn yearly profits up to
+                21%.</li>
+            <li><h5>Investment in 5 years old sandalwood plantation:</h5>
+                Birta Agro Concerns invites
+                individuals and organizations to invest in our existing 5 year old sandalwood plantation
+                and start earning a 19% yearly profit after the plantation completes 15 years.</li>
+        </ul>
+        <h4>Collaboration opportunities for Agents:</h4>
+        <p>Birta Agro Concerns invites sales agents to collaborate with us on profit percentage basis as per
+            the sales achieved. We have two collaboration opportunities for sales agents as follows:</p>
+        <ul>
+
+
+            <li>Sales agent for Agarwood products</li>
+            <li>Sales agents for tree sales to individuals and companies</li>
+        </ul>
+      </article>
+    </section>
+    {% include 'footer.html' %}
+    </body>
