@@ -1,1 +1,1 @@
-web: gunicorn agarwood.wsgi:application --log-file -
+web: gunicorn agarwood.wsgi
